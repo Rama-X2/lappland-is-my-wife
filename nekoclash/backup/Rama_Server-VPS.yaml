@@ -1,0 +1,262 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+proxies:
+  - name: live.iflix.com
+    type: vmess
+    server: bz.kmnetz.com
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: live.iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: live.iflix.com
+  - name: vplay.iflix.com
+    type: vmess
+    server: km.cak-don.my.id
+    port: 443
+    uuid: cd547532-2133-48ff-a19d-9a3d6bebcd83
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: vplay.iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: vplay.iflix.com
+  - name: hwvip.iflix.com
+    type: vmess
+    server: km.cak-don.my.id
+    port: 443
+    uuid: cd547532-2133-48ff-a19d-9a3d6bebcd83
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: hwvip.iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: hwvip.iflix.com
+  - name: iflix.com
+    type: vmess
+    server: km.cak-don.my.id
+    port: 443
+    uuid: cd547532-2133-48ff-a19d-9a3d6bebcd83
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: iflix.com
+  - name: 104.18.43.123
+    type: vmess
+    server: 104.18.43.123
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: bz.kmnetz.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: bz.kmnetz.com
+  - name: pbdebugaccess.iflix.com
+    type: vmess
+    server: bz.kmnetz.com
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: pbdebugaccess.iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: live.iflix.com
+  - name: piay-app10-staging.iflix.com
+    type: vmess
+    server: bz.kmnetz.com
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: piay-app10-staging.iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: piay-app10-staging.iflix.com
+  - name: pay-cs-pccw.viu.com
+    type: vmess
+    server: bz.kmnetz.com
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: pay-cs-pccw.viu.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: pay-cs-pccw.viu.com
+  - name: upload.iflix.com
+    type: vmess
+    server: bz.kmnetz.com
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: upload.iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: upload.iflix.com
+  - name: pbaccess.iflix.com
+    type: vmess
+    server: bz.kmnetz.com
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: pbaccess.iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: pbaccess.iflix.com
+  - name: access.iflix.com
+    type: vmess
+    server: bz.kmnetz.com
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: access.iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: access.iflix.com
+  - name: tv.iflix.com
+    type: vmess
+    server: bz.kmnetz.com
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: tv.iflix.com
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: tv.iflix.com
+  - name: access.wetv.vip
+    type: vmess
+    server: bz.kmnetz.com
+    port: 443
+    uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: access.wetv.vip
+    network: ws
+    ws-opts:
+      path: /netzvmess
+      headers:
+        Host: access.wetv.vip
+proxy-groups:
+  - name: Rama_Server
+    type: select
+    proxies:
+      - live.iflix.com
+      - vplay.iflix.com
+      - hwvip.iflix.com
+      - iflix.com
+      - 104.18.43.123
+      - pbdebugaccess.iflix.com
+      - piay-app10-staging.iflix.com
+      - pay-cs-pccw.viu.com
+      - upload.iflix.com
+      - pbaccess.iflix.com
+      - access.iflix.com
+      - tv.iflix.com
+      - access.wetv.vip
+      - DIRECT
+rules:
+  - MATCH,Rama_Server
