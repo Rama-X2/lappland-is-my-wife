@@ -1,0 +1,94 @@
+---
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: global
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ''
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+  - 8.8.8.8
+  - 1.0.0.1
+  - https://dns.google/dns-query
+  fallback:
+  - 1.1.1.1
+  - 8.8.4.4
+  - https://cloudflare-dns.com/dns-query
+  - 112.215.203.254
+  default-nameserver:
+  - 8.8.8.8
+  - 1.1.1.1
+  - 112.215.203.254
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "+.*"
+proxies:
+- name: live_iflix_com
+  server: bz.kmnetz.com
+  port: 443
+  type: vmess
+  uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: live.iflix.com
+  network: ws
+  ws-opts:
+    path: "/netzvmess"
+    headers:
+      Host: live.iflix.com
+  udp: true
+- name: graph.instagram.com
+  server: bz.kmnetz.com
+  port: 443
+  type: vmess
+  uuid: e20b387c-e6d2-457e-b326-cdb5af7a14ca
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: graph.instagram.com
+  network: ws
+  ws-opts:
+    path: "/netzvmess"
+    headers:
+      Host: graph.instagram.com
+  udp: true
+proxy-groups:
+- name: Rama_Server
+  type: select
+  proxies:
+  - live_iflix_com
+  - graph.instagram.com
+  - DIRECT
+rules:
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- MATCH,Rama_Server
+external-ui: "/usr/share/openclash/ui"
+experimental:
+  sniff-tls-sni: true
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
+authentication:
+- Clash:ZyUXr1Jo

@@ -1,0 +1,281 @@
+---
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: global
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: '123456'
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+  - 8.8.8.8
+  - 1.0.0.1
+  - https://dns.google/dns-query
+  fallback:
+  - 1.1.1.1
+  - 8.8.4.4
+  - https://cloudflare-dns.com/dns-query
+  - 112.215.203.254
+  default-nameserver:
+  - 8.8.8.8
+  - 1.1.1.1
+  - 112.215.203.254
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "+.*"
+proxies:
+- name: live.iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: live.iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: live.iflix.com
+- name: vplay.iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: vplay.iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: vplay.iflix.com
+- name: hwvip.iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: hwvip.iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: hwvip.iflix.com
+- name: iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: iflix.com
+- name: 104.18.43.123
+  type: vmess
+  server: 104.18.43.123
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sg3.socifiles.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: sg3.socifiles.com
+- name: pbdebugaccess.iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: pbdebugaccess.iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: pbdebugaccess.iflix.com
+- name: piay-app10-staging.iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: piay-app10-staging.iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: piay-app10-staging.iflix.com
+- name: pay-cs-pccw.viu.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: pay-cs-pccw.viu.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: pay-cs-pccw.viu.com
+- name: upload.iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: upload.iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: upload.iflix.com
+- name: pbaccess.iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: pbaccess.iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: pbaccess.iflix.com
+- name: access.iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: access.iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: access.iflix.com
+- name: tv.iflix.com
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: tv.iflix.com
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: tv.iflix.com
+- name: access.wetv.vip
+  type: vmess
+  server: sg3.socifiles.com
+  port: 443
+  uuid: ec3dcb70-ed91-11ef-9127-1239d0255272
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: access.wetv.vip
+  network: ws
+  ws-opts:
+    path: "/vmws"
+    headers:
+      Host: access.wetv.vip
+proxy-groups:
+- name: Rama_Server
+  type: select
+  proxies:
+  - live.iflix.com
+  - vplay.iflix.com
+  - hwvip.iflix.com
+  - iflix.com
+  - 104.18.43.123
+  - pbdebugaccess.iflix.com
+  - piay-app10-staging.iflix.com
+  - pay-cs-pccw.viu.com
+  - upload.iflix.com
+  - pbaccess.iflix.com
+  - access.iflix.com
+  - tv.iflix.com
+  - access.wetv.vip
+  - DIRECT
+rules:
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- MATCH,Rama_Server
+external-ui: "/usr/share/openclash/ui"
+experimental:
+  sniff-tls-sni: true
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
+authentication:
+- Clash:ZyUXr1Jo
