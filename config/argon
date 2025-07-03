@@ -1,0 +1,11 @@
+
+config global
+	option primary '#4390c4'
+	option dark_primary '#277db8'
+	option online_wallpaper 'none'
+	option mode 'light'
+	option transparency '0.3'
+	option transparency_dark '0.3'
+	option blur '3'
+	option blur_dark '2'
+

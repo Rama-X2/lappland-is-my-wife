@@ -1,0 +1,5 @@
+
+config netspeedtest 'config'
+	option iperf3_enabled '0'
+	option librespeed_enabled '0'
+
