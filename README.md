@@ -8,3 +8,13 @@
 **[EN] {v12 /2023 - (this is the encore/base file for fw oc), the rest are config insert files for rvx. :v}**
 
    This project is still under development, please be patient to wait for the final version. Actually, the core project of this fw can be used right now, it's just that I haven't tidied up/fixed some of the bugs, and I haven't added some of its superior features.
+
+
+
+
+
+██    ██ ████████ ████████  █████       ██     ██    ██  █████  ███    ██  ██████      ████████  █████  ██   ██ ██    ██     ████████  █████  ██   ██ ██    ██      █████       ██  █████  ██   ██     ██  
+ ██  ██     ██       ██    ██   ██     ██       ██  ██  ██   ██ ████   ██ ██              ██    ██   ██ ██   ██ ██    ██        ██    ██   ██ ██   ██ ██    ██     ██   ██      ██ ██   ██ ██   ██      ██ 
+  ████      ██       ██    ███████     ██        ████   ███████ ██ ██  ██ ██   ███        ██    ███████ ███████ ██    ██        ██    ███████ ███████ ██    ██     ███████      ██ ███████ ███████      ██ 
+   ██       ██       ██    ██   ██     ██         ██    ██   ██ ██  ██ ██ ██    ██        ██    ██   ██ ██   ██ ██    ██        ██    ██   ██ ██   ██ ██    ██     ██   ██ ██   ██ ██   ██ ██   ██      ██ 
+   ██       ██       ██    ██   ██      ██        ██    ██   ██ ██   ████  ██████         ██    ██   ██ ██   ██  ██████         ██    ██   ██ ██   ██  ██████      ██   ██  █████  ██   ██ ██   ██     ██
