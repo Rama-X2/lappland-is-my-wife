@@ -3,6 +3,7 @@
 
    Proyek ini masih dalam tahap pengembangan, harap bersabar menunggu versi finalnya. Sebenarnya, proyek inti dari fw ini sudah bisa digunakan saat ini, hanya saja saya belum merapikan/memperbaiki beberapa bug, dan saya belum menambahkan beberapa fitur unggulannya.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **[EN] {v12 /2023 - (this is the encore/base file for fw oc), the rest are config insert files for rvx. :v}**
 
