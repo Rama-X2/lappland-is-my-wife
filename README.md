@@ -1,7 +1,7 @@
 # lappland-is-my-wife
 **[ID] {v12 /2023 - (ini file encore/base-nya fw oc), sisanya itu file sisipan config buat rvx. :v}**
 
-   Proyek ini masih dalam tahap pengembangan, harap bersabar menunggu versi finalnya. Sebenarnya, proyek inti dari fw ini sudah bisa digunakan saat ini, hanya saja saya belum merapikan/memperbaiki beberapa bug, dan saya belum menambahkan beberapa fitur unggulannya.
+   Project ini masih dalam tahap pengembangan, harap bersabar menunggu versi finalnya. Sebenarnya, proyek inti dari fw ini sudah bisa digunakan saat ini, hanya saja saya belum merapikan/memperbaiki beberapa bug, dan saya belum menambahkan beberapa fitur unggulannya.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
